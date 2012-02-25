@@ -8,5 +8,11 @@ var server = http.createServer(function(request, response) {
 });
 
 var socket = io.listen(server);
-socket.on('connection', function(client){});
+socket.sockets.on('connection', function (socket) {
+  console.log('connection');
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
 server.listen(process.env.C9_PORT);
