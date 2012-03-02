@@ -1,7 +1,6 @@
 var should = require('should');
 var http = require('http');
 var io = require('socket.io-client');
-var querystring = require('querystring');
 
 var socketURL = 'http://localhost:9002';
 var options ={
