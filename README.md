@@ -1,13 +1,29 @@
-Notifyit is used to notify an activity to logged users in real time.
+# Notifyit
 
-To launch :
-npm install socket.io
-node notifyit.js
+[![Build Status](https://secure.travis-ci.org/cexbrayat/notifyit.png)](http://travis-ci.org/cexbrayat/notifyit)
 
-I recommend the use of nodemon to relaunch on save
+## Purpose
+
+Notifyit is used to notify an activity to logged users in real time.  
+
+## To launch  
+```
+npm install socket.io  
+node notifyit.js  
+```
+
+I recommend the use of nodemon to relaunch on save  
+```
+npm install 
 nodemon notifyit.js
+```
 
-To launch unit tests (with a running instance of the server)
-npm install should
-npm install socket.io-client
+## To test
+
+With a running instance of the server
+```
+npm install expresso  
+npm install should  
+npm install socket.io-client  
 ../node_modules/expresso/bin/expresso notifyit-test.js
+```
