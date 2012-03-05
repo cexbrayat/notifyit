@@ -1,0 +1,21 @@
+{
+  "name": "notifyit",
+  "version": "0.1",
+  "author": "Cédric Exbrayat",
+  "description": "Used to notify browser in real time notifications to logged users.",
+  "homepage": "https://github.com/cexbrayat/notifyit",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cexbrayat/notifyit.git"
+  },
+  "scripts": {
+    "test": "expresso notifyit-test.js"
+  },
+  "dependencies": {
+    "socket.io": "0.9.0"
+  },
+  "devDependencies": {
+    "socket.io-client": "0.9.0",
+    "should": "0.6.0"
+  }
+}
