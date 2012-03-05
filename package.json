@@ -1,6 +1,6 @@
 {
   "name": "notifyit",
-  "version": "0.1",
+  "version": "0.1.0",
   "author": "Cédric Exbrayat",
   "description": "Used to notify browser in real time notifications to logged users.",
   "homepage": "https://github.com/cexbrayat/notifyit",
