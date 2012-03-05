@@ -9,7 +9,7 @@
     "url": "git://github.com/cexbrayat/notifyit.git"
   },
   "scripts": {
-    "test": "../node_modules/expresso/bin/expresso notifyit-test.js"
+    "test": "expresso notifyit-test.js"
   },
   "dependencies": {
     "socket.io": "0.9.0"
