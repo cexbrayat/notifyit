@@ -19,15 +19,15 @@ var server = http.createServer(function(request, response) {
     //on recupere les users interesses par la notif
     console.log("users interested '" + postData.users + "'.");
 
-    for(user in postData.users){
+    for(var user in postData.users){
       //on recupere la socket associee
       var socket = connecteds[postData.users[user]];
       //si le user est connecte, alors on envoie le message
-      if(socket != undefined){
+      if(socket !== undefined){
         console.log('activity sent to ' + postData.users[user]);
-      	socket.emit('activity', { data: postData.content });
+        socket.emit('activity', { data: postData.content });
       }
-	  }
+    }
   });
 
   response.end();
@@ -43,7 +43,7 @@ websocket.sockets.on('connection', function (socket) {
   console.log('client');
 
   socket.on('user', function (user) {
-  	//on stocke le login du user
+    //on stocke le login du user
     console.log('user ' + user.name);
     delete connecteds[user.name];
     connecteds[user.name] = socket;
