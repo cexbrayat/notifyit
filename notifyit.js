@@ -51,4 +51,7 @@ websocket.sockets.on('connection', function (socket) {
 });
 
 //server.listen(process.env.C9_PORT);
-server.listen(9002);
+var port =  process.env.PORT || 9002;
+server.listen(port, function() {
+  console.log("Listening on " + port);
+});
